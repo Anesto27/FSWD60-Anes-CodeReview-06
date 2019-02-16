@@ -2900,3 +2900,11 @@
 	#Events h2{
 		padding-bottom: 20px;
 	}
+
+/*media query for the pictures if the screen is smaller than 600px the picture will not be displayed */
+@media screen and (max-width: 600px) {
+
+	#pic{
+			display: none;
+	}
+}

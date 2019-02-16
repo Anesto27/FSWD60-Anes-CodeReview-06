@@ -15,7 +15,7 @@ class locations{
 	}
 // create a function called render with a return inside the function
 	render(){
-		return `<img src="${this.img}" width=300px height=300px><br>${this.name}<br>${this.adress}${this.zip}`
+		return `<img src="${this.img}" id="pic" width=300px height=300px><br>${this.name}<br>${this.adress}${this.zip}`
 	}
 }
 
