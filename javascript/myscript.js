@@ -107,19 +107,21 @@ var events = /** @class */ (function (_super) {
         return _this;
     }
     events.prototype.render3 = function () {
-        return "<div class=\"col-lg-3 col-md-6 col-sm-12\">" + _super.prototype.render.call(this) + "<br>" + this.HomePage + "<br>" + this.eventDate + "<br>" + this.price + "</div>";
+        return "<div class=\"col-lg-3 col-md-6 col-sm-12\">" + _super.prototype.render.call(this) + "<br>" + this.HomePage + "<br><p><span id=\"datetime\">" + this.eventDate + "</span></p>" + this.price + "</div>";
     };
     return events;
 }(locations));
+var dt = new Date();
 var eventsData = new Array();
-eventsData[0] = new events('img/dino.jpeg', 'Dino Merlin', 'Gazometer 1,', '1030 Vienna', 'http://www.gazometer.at/', '10h March 2019', '20$');
-eventsData[1] = new events('img/sasa.jpeg', 'Oben Lunch', 'Ottakringerstraße 172,', '1160 Vienna', 'https://clubeisberg.at/', '25 March 2019', '20$');
-eventsData[2] = new events('img/shawn.jpeg', 'Shawn Mendes', 'Stadthalle,', '1150 Vienna', 'https://www.stadthalle.at/', '3rd April 2019', '50$');
-eventsData[3] = new events('img/sunrise.jpeg', 'Sunrise Avenue', 'Stadthalle,', '1150 Vienna', 'http://stadthalle.at/', '5th Mai 2019', '50$');
+eventsData[0] = new events('img/dino.jpeg', 'Dino Merlin', 'Gazometer 1,', '1030 Vienna', 'http://www.gazometer.at/', '', '20$');
+eventsData[1] = new events('img/sasa.jpeg', 'Oben Lunch', 'Ottakringerstraße 172,', '1160 Vienna', 'https://clubeisberg.at/', '', '20$');
+eventsData[2] = new events('img/shawn.jpeg', 'Shawn Mendes', 'Stadthalle,', '1150 Vienna', 'https://www.stadthalle.at/', '', '50$');
+eventsData[3] = new events('img/sunrise.jpeg', 'Sunrise Avenue', 'Stadthalle,', '1150 Vienna', 'http://stadthalle.at/', '', '50$');
 // create a function called contentEvents and insert a for loop inside to use the array events Data
 function contentEvents() {
     for (var i in eventsData) {
         document.getElementById('Events').innerHTML += eventsData[i].render3();
+        document.getElementById("datetime").innerHTML = dt.toLocaleString();
     }
 }
 contentEvents();
