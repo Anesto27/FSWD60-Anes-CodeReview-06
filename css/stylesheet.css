@@ -2736,7 +2736,7 @@
 
 	#banner {
 		padding: 12em 0 10em 0;
-		/*background-image: url("../img/vienna.jpg");*/
+		background-image: url("../img/vienna.jpg");*/
 		height: 600px;
 		background-size: cover;
 		background-position: top;
@@ -2866,4 +2866,37 @@
 			text-align: center;
 		}
 
+		
+
+	}
+	/*Style for sightseeing.html */
+/* move the whole row places from the content title 50px to the top and to the bottom  */
+	#Places{
+		padding-bottom: 50px;
+		padding-top: 50px;
+		text-align: center; /* set the whole text to the center */
+	}
+
+	#Places h2{ 						/* make space between the title and the row of the content*/
+		padding-bottom: 20px;
+	}
+
+	#Restaurants{.        /* same her with the other rows*/
+		padding-bottom: 50px;
+		padding-top: 50px;
+		text-align: center;
+	}
+
+	#Restaurants h2{
+		padding-bottom: 20px;
+	}
+
+	#Events{
+		padding-bottom: 100px;
+		padding-top: 50px;
+		text-align: center;
+	}
+
+	#Events h2{
+		padding-bottom: 20px;
 	}
